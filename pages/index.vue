@@ -1,19 +1,30 @@
 <script setup lang='ts'>
-const loading = ref(true);
+
 </script>
 
 <template>
-  <div>
-    <ColorMode class="absolute top-2 right-2" />
-    <h1>LOADING</h1>
-    <div v-if="loading">
-      <div class="flex items-center gap-4">
-        <USkeleton class="h-12 w-12 rounded-full" />
-        <div class="grid gap-2">
-          <USkeleton class="h-4 w-[250px]" />
-          <USkeleton class="h-4 w-[200px]" />
-        </div>
-      </div>
+  <div class="container mx-auto bg-primary-500/8 border border-primary-400/70 rounded-xl h-auto p-8 md:p-16 flex items-center justify-center min-h-[calc(100vh-200px)]">
+    <!-- Centered content -->
+    <div class="text-center">
+      <!-- Hero title -->
+      <h1 class="font-bold text-5xl md:text-7xl text-shadow-sm mb-6">
+        Share Your Journey, <br> Inspire Others
+      </h1>
+      <!-- Subtitle -->
+      <p class="text-xl md:text-2xl mb-10 px-36 text-neutral-400">
+        Document your adventures, discover new places, and connect with a community of travelers.
+      </p>
+      <!-- CTA Button -->
+      <UButton
+        size="xl"
+        label="Get Started"
+        trailing-icon="i-heroicons-arrow-right-circle-20-solid"
+        trailing
+        color="primary"
+        variant="solid"
+      >
+        Start Your Adventure
+      </UButton>
     </div>
   </div>
 </template>
