@@ -1,4 +1,5 @@
 # Travel Log App built with Nuxt UI
+
 This is a simple travel log app built with Nuxt UI.
 
 ## Setup
@@ -38,4 +39,21 @@ Locally preview production build:
 pnpm preview
 
 ```
-"# travel-log-nuxt-ui" 
+
+# THIS PROJECT USES HUSKY AND HAS A PRE COMIT HOOK TO CHECK STAGED FILES FOR LINTER ERRORS.
+
+# TO BYPASS THIS, USE THE FOLLOWING COMMAND:
+
+```bash
+
+git commit -m "your commit message" --no-verify
+
+```
+
+OR
+
+```bash
+
+git commit -m "your commit message" -N
+
+```
