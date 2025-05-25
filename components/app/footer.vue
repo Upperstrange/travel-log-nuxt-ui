@@ -9,7 +9,7 @@
         <div>
           <div class="flex items-center mb-4">
             <UIcon name="i-heroicons-map-pin-solid" class="h-8 w-8 text-primary-400" />
-            <span class="ml-2 text-2xl font-bold">Let'sGo</span>
+            <span class="ml-2 text-2xl font-bold font-logo">Let'sGo</span>
           </div>
           <p class="text-neutral-400">
             Your journey, beautifully documented. Create lasting memories with every adventure.

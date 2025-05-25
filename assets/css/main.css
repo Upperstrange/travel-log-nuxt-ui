@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme {
+  --font-display: "Roboto", "sans-serif";
+  --font-mono: "JetBrains Mono", "monospace";
+  --font-logo: "Poppins", "sans-serif";
+}
+
+div {
+  font-family: var(--font-display);
+}
