@@ -21,10 +21,26 @@
             Product
           </h3>
           <ul class="space-y-2 text-neutral-400">
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Features</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Pricing</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Download</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Updates</NuxtLink></li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Features
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Pricing
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Download
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Updates
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
@@ -33,10 +49,26 @@
             Support
           </h3>
           <ul class="space-y-2 text-neutral-400">
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Help Center</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Contact Us</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Privacy Policy</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Terms of Service</NuxtLink></li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Help Center
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Contact Us
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Privacy Policy
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Terms of Service
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
@@ -45,10 +77,26 @@
             Connect
           </h3>
           <ul class="space-y-2 text-neutral-400">
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Twitter</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Instagram</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Facebook</NuxtLink></li>
-            <li><NuxtLink to="#" class="hover:text-white transition-colors">Blog</NuxtLink></li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Twitter
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Instagram
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Facebook
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="#" class="hover:text-white transition-colors">
+                Blog
+              </NuxtLink>
+            </li>
           </ul>
         </div>
       </div>

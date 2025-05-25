@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 const mobileMenuOpen = ref(false);
-
 const navLinks = [
   { label: "Features", to: "#features" },
   { label: "How it Works", to: "#how-it-works" },
