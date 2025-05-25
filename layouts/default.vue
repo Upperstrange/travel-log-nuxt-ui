@@ -1,14 +1,10 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen">
     <main>
-      <AppNavBar />
-      <div class="p-4">
-        <slot />
-      </div>
+      <AppHeader />
+      <slot />
     </main>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
