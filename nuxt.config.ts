@@ -1,5 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
+import "./lib/env";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
@@ -8,8 +10,6 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       { name: "Roboto", provider: "google" },
-      // You can add more font families here
-      // { name: 'MyCustomFont', src: '/path/to/font.woff2' } // Example for local fonts
     ],
   },
   vite: {
