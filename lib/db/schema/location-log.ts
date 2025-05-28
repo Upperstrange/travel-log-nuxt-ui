@@ -1,6 +1,6 @@
 import { int, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-import { user } from "./auth";
+import { user } from "../../../auth-schema";
 import { location } from "./location";
 
 export const locationLog = sqliteTable("locationLog", {

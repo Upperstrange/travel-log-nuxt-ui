@@ -15,6 +15,13 @@
       "when": 1748441264279,
       "tag": "0001_mighty_mole_man",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1748456399407,
+      "tag": "0002_skinny_shocker",
+      "breakpoints": true
     }
   ]
 }
