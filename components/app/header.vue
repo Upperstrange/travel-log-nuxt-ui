@@ -10,14 +10,16 @@ const navLinks = [
 <template>
   <header class="bg-white dark:bg-neutral-900 shadow-sm sticky top-0 z-50">
     <UContainer>
+      <!-- Header content -->
       <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
         <NuxtLink to="/" class="flex items-center">
           <UIcon name="i-heroicons-map-pin-solid" class="h-8 w-8 text-primary-600 dark:text-primary-400" />
           <span class="ml-2 text-2xl font-bold font-logo text-neutral-900 dark:text-white">Let'sGo</span>
         </NuxtLink>
-
         <!-- Desktop Menu -->
         <nav class="hidden md:flex items-center space-x-2">
+          <!-- Navigation Links -->
           <UButton
             v-for="link in navLinks"
             :key="link.to"
@@ -28,19 +30,16 @@ const navLinks = [
           >
             {{ link.label }}
           </UButton>
-          <UButton
-            to="#get-started"
-            icon="i-heroicons-arrow-right-circle-solid"
-            class="ml-2"
-          >
-            Get Started
-          </UButton>
+          <!-- Login button -->
+          <AuthBtn />
+          <!-- Theme switcher -->
           <ColorMode />
         </nav>
-
         <!-- Mobile Menu Button -->
         <div class="md:hidden flex items-center space-x-2">
+          <!-- Theme switcher -->
           <ColorMode />
+          <!-- Mobile Menu Button -->
           <UButton
             icon="i-heroicons-bars-3-solid"
             variant="ghost"
@@ -51,7 +50,6 @@ const navLinks = [
         </div>
       </div>
     </UContainer>
-
     <!-- Mobile Menu Panel -->
     <Transition
       enter-active-class="transition ease-out duration-200"
@@ -64,6 +62,7 @@ const navLinks = [
       <div v-if="mobileMenuOpen" class="md:hidden bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-700">
         <UContainer class="py-3">
           <nav class="flex flex-col space-y-1">
+            <!-- Navigation Links -->
             <UButton
               v-for="(link, key) in navLinks"
               :key="key"
@@ -76,16 +75,8 @@ const navLinks = [
             >
               {{ link.label }}
             </UButton>
-            <UButton
-              to="#get-started"
-              icon="i-heroicons-arrow-right-circle-solid"
-              block
-              class="mt-2 justify-center"
-              @click="mobileMenuOpen = false"
-            >
-              Get Started
-            </UButton>
-            <!-- ColorMode component could also be placed here if preferred for mobile menu items -->
+            <!-- Login button -->
+            <AuthBtn :is-mobile="true" />
           </nav>
         </UContainer>
       </div>

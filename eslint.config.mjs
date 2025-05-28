@@ -17,6 +17,8 @@ export default withNuxt(
     ignores: [
       ".pnpm-store/**",
       "**/migrations/*",
+      "nuxt.config.ts",
+      "**/node_modules/**",
     ],
   }, {
     rules: {

@@ -5,7 +5,9 @@
 <template>
   <footer class="bg-neutral-900 text-white py-12">
     <UContainer>
+      <!-- Footer content -->
       <div class="grid md:grid-cols-4 gap-8">
+        <!-- Logo and description -->
         <div>
           <div class="flex items-center mb-4">
             <UIcon name="i-heroicons-map-pin-solid" class="h-8 w-8 text-primary-400" />
@@ -15,7 +17,7 @@
             Your journey, beautifully documented. Create lasting memories with every adventure.
           </p>
         </div>
-
+        <!-- Links -->
         <div>
           <h3 class="text-lg font-semibold mb-4">
             Product
@@ -43,7 +45,7 @@
             </li>
           </ul>
         </div>
-
+        <!-- Support -->
         <div>
           <h3 class="text-lg font-semibold mb-4">
             Support
@@ -71,7 +73,7 @@
             </li>
           </ul>
         </div>
-
+        <!-- Connect -->
         <div>
           <h3 class="text-lg font-semibold mb-4">
             Connect
@@ -100,7 +102,7 @@
           </ul>
         </div>
       </div>
-
+      <!-- Copyright -->
       <div class="border-t border-neutral-800 mt-8 pt-8 text-center text-neutral-400">
         <p>&copy; {{ new Date().getFullYear() }} Let'sGo. All rights reserved.</p>
       </div>
@@ -108,6 +110,4 @@
   </footer>
 </template>
 
-<style scoped>
-/* Add any component-specific styles here if needed */
-</style>
+<style scoped></style>
