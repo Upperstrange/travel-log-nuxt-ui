@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-
+const authStore = useAuthStore();
 </script>
 
 <template>
@@ -24,11 +24,21 @@
           <!-- Hero buttons -->
           <div class="mt-8 flex flex-col sm:flex-row gap-4">
             <UButton
+              v-if="!authStore.user"
               size="xl"
               variant="solid"
               label="Get Started Today"
               icon="i-heroicons-arrow-right"
               to="/login"
+              class="flex-1 sm:flex-none justify-center"
+            />
+            <UButton
+              v-if="authStore.user"
+              size="xl"
+              variant="solid"
+              label="Go to dashboard"
+              icon="i-heroicons-arrow-right"
+              to="/dashboard"
               class="flex-1 sm:flex-none justify-center"
             />
             <UButton
