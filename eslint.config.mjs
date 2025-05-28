@@ -16,6 +16,7 @@ export default withNuxt(
     },
     ignores: [
       ".pnpm-store/**",
+      "**/migrations/*",
     ],
   }, {
     rules: {
