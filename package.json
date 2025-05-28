@@ -24,6 +24,7 @@
     "@pinia/nuxt": "0.11.0",
     "@tailwindcss/vite": "^4.1.7",
     "@unhead/vue": "^2.0.10",
+    "@vueuse/core": "^13.3.0",
     "better-auth": "^1.2.8",
     "concurrently": "^9.1.2",
     "drizzle-orm": "^0.43.1",

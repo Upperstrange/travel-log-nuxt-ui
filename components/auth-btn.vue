@@ -1,6 +1,4 @@
 <script setup lang='ts'>
-import { createAuthClient } from "better-auth/client";
-
 defineProps({
   isMobile: {
     type: Boolean,
@@ -11,15 +9,8 @@ defineProps({
     default: "md",
   },
 });
-const authClient = createAuthClient();
-// const authStore = useAuthStore();
-async function signIn() {
-  await authClient.signIn.social({
-    provider: "google",
-    callbackURL: "/dashboard",
-    errorCallbackURL: "/error",
-  });
-}
+
+const authStore = useAuthStore();
 </script>
 
 <template>
@@ -34,7 +25,7 @@ async function signIn() {
       icon="i-picon:google"
       class="ml-2"
       label="Login with Google"
-      @click="signIn"
+      @click="authStore.signIn"
     />
     <!-- For mobile -->
     <UButton
@@ -47,7 +38,7 @@ async function signIn() {
       block
       class="mt-2 justify-center"
       label="Login with Google"
-      @click="signIn"
+      @click="authStore.signIn"
     />
   </div>
 </template>

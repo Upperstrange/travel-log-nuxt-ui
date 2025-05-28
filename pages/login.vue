@@ -6,7 +6,7 @@ definePageMeta({
 
 <template>
   <div>
-    <UContainer class="w-full max-w-md p-8 bg-neutral-50 dark:bg-neutral-900 rounded-xl shadow-xl text-center">
+    <UContainer class="w-full max-w-md p-8 bg-white dark:bg-neutral-800 rounded-xl shadow-xl text-center">
       <div class="flex justify-center mb-6">
         <UIcon name="i-heroicons-map-pin-solid" class="size-5 text-primary-600 dark:text-primary-400" />
       </div>

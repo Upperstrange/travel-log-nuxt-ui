@@ -1,6 +1,6 @@
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-import { user } from "./auth";
+import { user } from "../../../auth-schema";
 import { locationLog } from "./location-log";
 
 export const locationLogImage = sqliteTable("locationLogImage", {

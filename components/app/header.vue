@@ -8,7 +8,7 @@ const navLinks = [
 </script>
 
 <template>
-  <header class="bg-white dark:bg-neutral-900 shadow-sm sticky top-0 z-50">
+  <header class="backdrop-blur-2xl bg-white/40 dark:bg-neutral-900/40 shadow-sm sticky top-0 z-50">
     <UContainer>
       <!-- Header content -->
       <div class="flex justify-between items-center h-16">
