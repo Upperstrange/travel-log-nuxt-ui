@@ -77,7 +77,7 @@ const navLinks = [
               {{ link.label }}
             </UButton>
             <!-- Login button -->
-            <AuthBtn :is-mobile="true" />
+            <AuthBtn v-if="!authStore.user" :is-mobile="true" />
           </nav>
         </UContainer>
       </div>
