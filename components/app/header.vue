@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 const mobileMenuOpen = ref(false);
+const authStore = useAuthStore();
 const navLinks = [
   { label: "Features", to: "#features" },
   { label: "How it Works", to: "#how-it-works" },
@@ -31,7 +32,7 @@ const navLinks = [
             {{ link.label }}
           </UButton>
           <!-- Login button -->
-          <AuthBtn />
+          <AuthBtn v-if="authStore.user" />
           <!-- Theme switcher -->
           <ColorMode />
         </nav>
