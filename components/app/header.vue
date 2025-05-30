@@ -32,7 +32,7 @@ const navLinks = [
             {{ link.label }}
           </UButton>
           <!-- Login button -->
-          <AuthBtn v-if="authStore.user" />
+          <AuthBtn v-if="!authStore.user" />
           <!-- Theme switcher -->
           <ColorMode />
         </nav>
