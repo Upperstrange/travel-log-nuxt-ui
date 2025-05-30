@@ -33,6 +33,8 @@ const navLinks = [
           </UButton>
           <!-- Login button -->
           <AuthBtn v-if="!authStore.user" />
+          <!-- Logout button -->
+          <AuthBtn v-if="authStore.user" :logout="true" />
           <!-- Theme switcher -->
           <ColorMode />
         </nav>
@@ -78,6 +80,8 @@ const navLinks = [
             </UButton>
             <!-- Login button -->
             <AuthBtn v-if="!authStore.user" :is-mobile="true" />
+            <!-- Logout button -->
+            <AuthBtn v-if="authStore.user" :is-mobile="true" :logout="true" />
           </nav>
         </UContainer>
       </div>
