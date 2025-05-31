@@ -6,12 +6,17 @@ defineProps({
     default: "i-lucide-home",
   },
   link: String,
+  isLink: {
+    type: Boolean,
+    default: true,
+  },
 });
 </script>
 
 <template>
   <div class="my-auto mx-4">
     <NuxtLink
+      v-if="isLink"
       :to="link"
       class="flex flex-col gap-1 items-center justify-center flex-1 transition-colors duration-200 group"
     >
@@ -23,6 +28,11 @@ defineProps({
         {{ label }}
       </span>
     </NuxtLink>
+    <UIcon
+      v-else
+      :name="icon"
+      class="w-6 h-6 text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 cursor-pointer"
+    />
   </div>
 </template>
 

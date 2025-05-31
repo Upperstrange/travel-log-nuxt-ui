@@ -24,7 +24,13 @@ const imageLink = computed(
       }"
     >
       <UTooltip text="User">
-        <SidebarMobileItem aria-label="User" icon="i-lucide-user" link="/dashboard" />
+        <!-- <div aria-label="User icon" class="my-auto mx-4 cursor-pointer">
+          <UIcon
+            name="i-lucide-user"
+            class="w-6 h-6 text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+          />
+        </div> -->
+        <SidebarMobileItem aria-label="User" icon="i-lucide-user" :is-link="false" />
       </UTooltip>
 
       <template #content>
@@ -44,6 +50,8 @@ const imageLink = computed(
         </UCard>
       </template>
     </UPopover>
+
+    <ColorMode />
   </div>
 </template>
 

@@ -1,6 +1,13 @@
+<script setup>
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+const showColorMode = breakpoints.greaterOrEqual("sm");
+</script>
+
 <template>
   <div class="min-h-screen w-full flex">
-    <ColorMode class="absolute top-4 right-4" />
+    <ColorMode v-if="showColorMode" class="absolute top-4 right-4" />
     <Sidebar class="sidebar-desktop-custom-styling" />
     <main class="flex flex-col p-4 w-full">
       <slot />
@@ -22,7 +29,7 @@
 .sidebar-mobile-custom-styling {
   display: none; /* Hidden by default */
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   right: 0;
   left: 0;
 }

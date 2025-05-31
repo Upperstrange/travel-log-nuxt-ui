@@ -18,7 +18,7 @@ function setColorMode(mode) {
 <template>
   <ClientOnly v-if="!colorMode?.forced">
     <UPopover>
-      <UButton :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'" color="neutral" variant="ghost" />
+      <SidebarMobileItem :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'" />
 
       <template #content>
         <div class="w-30 h-fit rounded-xl flex flex-col justify-center items-center bg-white dark:bg-neutral-900 ring-neutral-400/40 text-sm font-display text-neutral-900/80 dark:text-neutral-100/80 cursor-pointer">
