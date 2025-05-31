@@ -19,13 +19,13 @@ const imageLink = computed(
   <div>
     <!-- Expanded view -->
 
-    <UCard v-if="isHovered" class="w-90%">
+    <UCard v-if="isHovered" class="w-90% cursor-default select-none">
       <template #header>
         <div class="flex items-center gap-4 w-full h-fit p-2">
           <UAvatar :src="imageLink" alt="User avatar" size="md" class="ring-2 ring-primary-400 dark:ring-primary-600 shadow-sm" />
           <div class="flex flex-col gap-1">
             <span>{{ authStore.user?.name }}</span>
-            <UTooltip :text="authStore.user?.email" class="cursor-default select-none">
+            <UTooltip :text="authStore.user?.email">
               <span class="text-xs w-3/4 text-shadow-2xs truncate">{{ authStore.user?.email }}</span>
             </UTooltip>
           </div>

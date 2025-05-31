@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 const authStore = useAuthStore();
-
 const imageLink = computed(
   () =>
     authStore.user?.image
