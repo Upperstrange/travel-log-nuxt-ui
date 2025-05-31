@@ -15,7 +15,7 @@ const navLinks = [
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center">
-          <UIcon name="i-heroicons-map-pin-solid" class="h-8 w-8 text-primary-600 dark:text-primary-400" />
+          <Logo />
           <span class="ml-2 text-2xl font-bold font-logo text-neutral-900 dark:text-white">Let'sGo</span>
         </NuxtLink>
         <!-- Desktop Menu -->

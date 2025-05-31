@@ -6,11 +6,11 @@ defineProps({
   },
   primaryColor: {
     type: String,
-    default: "#3B82F6",
+    default: "#c95166",
   },
   secondaryColor: {
     type: String,
-    default: "#10B981",
+    default: "#059669",
   },
 });
 </script>
@@ -22,7 +22,6 @@ defineProps({
     viewBox="0 0 48 48"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    :class="className"
   >
     <!-- Globe/Circle Background -->
     <circle cx="24" cy="24" r="20" :fill="primaryColor" fill-opacity="0.1" :stroke="primaryColor" stroke-width="2" />

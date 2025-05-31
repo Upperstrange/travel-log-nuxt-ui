@@ -13,11 +13,11 @@ const notHovered = () => isHovered.value = false;
         <div class="mb-8 flex items-center justify-between">
           <!-- Logo when hovered -->
           <div v-if="isHovered" class="flex items-center gap-3">
-            <Logo :size="64" primary-color="#2563EB" secondary-color="#059669" />
+            <Logo :size="64" />
             <span class="text-xl font-semibold font-logo text-neutral-900 dark:text-white">Let'sGo</span>
           </div>
           <!-- Logo when not hovered -->
-          <Logo v-else :size="64" primary-color="#2563EB" secondary-color="#059669" />
+          <Logo v-else :size="64" />
         </div>
         <!-- Navigation -->
         <nav class="space-y-2">
