@@ -1,53 +1,34 @@
 <script setup lang="ts">
-const isHovered = shallowRef(false);
-const hovered = () => isHovered.value = true;
-const notHovered = () => isHovered.value = false;
+const sidebarStore = useSidebarStore();
 </script>
 
 <template>
-  <div class="">
-    <aside class="h-screen w-16 hover:w-64 bg-white dark:bg-neutral-900 p-4 flex flex-col justify-between shadow-xl transition-all duration-300 ease-in-out border-r border-neutral-200 dark:border-neutral-700 overflow-hidden" role="navigation" aria-label="Main sidebar navigation" @mouseenter="hovered" @mouseleave="notHovered">
-      <!-- Top Section -->
-      <div>
+  <div :class="{ 'w-68': sidebarStore.isOpen, 'w-20': !sidebarStore.isOpen }" class="flex gap-1 transition-all duration-300">
+    <!-- Sidebar content -->
+    <div class="bg-white dark:bg-neutral-950 flex flex-col justify-between border-r-1 border-r-neutral-300/30 drop-shadow-xs w-full">
+      <!-- Top area -->
+      <div class="flex flex-col">
         <!-- Logo -->
-        <div class="mb-8 flex items-center justify-between">
-          <!-- Logo when hovered -->
-          <div v-if="isHovered" class="flex items-center gap-3">
-            <Logo :size="64" />
-            <span class="text-xl font-semibold font-logo text-neutral-900 dark:text-white">Let'sGo</span>
-          </div>
-          <!-- Logo when not hovered -->
-          <Logo v-else :size="64" />
+        <div :class="{ 'justify-start gap-2 ml-4': sidebarStore.isOpen, 'justify-center mx-auto': !sidebarStore.isOpen }" class="flex items-center my-4">
+          <Logo />
+          <span v-if="sidebarStore.isOpen" class="font-logo text-2xl font-bold">Let'sGo</span>
         </div>
-        <!-- Navigation -->
-        <nav class="space-y-2">
-          <SidebarItem :hovered="isHovered" icon="i-heroicons-home" label="Home" link="#" aria-label="Home" />
-          <SidebarItem :hovered="isHovered" icon="i-heroicons-cog-6-tooth" label="Settings" link="#" aria-label="Settings" />
-        </nav>
+        <USeparator />
+        <!-- Navigation area -->
+        <div class="flex flex-col justify-start px-4 mt-4">
+          <slot name="nav-group" />
+        </div>
       </div>
-      <!-- Bottom Section -->
-      <SidebarUserCard :is-hovered="isHovered" />
-    </aside>
+      <SidebarUserCard :is-hovered="sidebarStore.isOpen" class="px-4 mb-4" />
+    </div>
+    <!-- Sidebar Toggle -->
+    <div :class="{ 'justify-end': sidebarStore.isOpen, 'justify-center': !sidebarStore.isOpen }" class="flex mt-12">
+      <UTooltip text="Toggle sidebar">
+        <UButton
+          icon="i-lucide-sidebar" variant="ghost" color="neutral" class="w-fit h-fit mr-2"
+          @click="sidebarStore.toggle"
+        />
+      </UTooltip>
+    </div>
   </div>
 </template>
-
-<style scoped>
-aside {
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-}
-
-aside::-webkit-scrollbar {
-  width: 6px;
-}
-
-aside::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-}
-
-aside::-webkit-scrollbar-track {
-  background: transparent;
-}
-</style>
