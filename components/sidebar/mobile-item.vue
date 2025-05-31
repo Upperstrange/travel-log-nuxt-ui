@@ -11,6 +11,7 @@ defineProps({
     default: true,
   },
 });
+const route = useRoute();
 </script>
 
 <template>
@@ -22,6 +23,7 @@ defineProps({
     >
       <UIcon
         :name="icon"
+        :class="{ 'text-primary-600 dark:text-primary-400': route.path === link }"
         class="w-6 h-6 text-neutral-500 dark:text-neutral-400 group-hover:text-primary-600 dark:group-hover:text-primary-400"
       />
       <span class="text-xs text-neutral-700 dark:text-neutral-300">

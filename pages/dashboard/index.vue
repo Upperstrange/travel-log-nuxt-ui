@@ -1,15 +1,12 @@
 <script setup lang='ts'>
 definePageMeta({
   layout: "dashboard",
-  // middleware: "protected",
 });
 </script>
 
 <template>
   <div>
-    <section>
-      <h1>Welcome to the dashboard</h1>
-    </section>
+    <span class="text-2xl text-black dark:text-white font-bold font-logo">Hi mom!</span>
   </div>
 </template>
 
