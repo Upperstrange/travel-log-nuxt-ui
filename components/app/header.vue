@@ -15,7 +15,7 @@ const navLinks = [
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center">
-          <NuxtImg src="/icon.png" class="w-48 h-48"/>
+          <NuxtImg src="/icon.png" class="size-5"/>
           <span class="ml-2 text-2xl font-bold font-logo text-neutral-900 dark:text-white">Let'sGo</span>
         </NuxtLink>
         <!-- Desktop Menu -->
